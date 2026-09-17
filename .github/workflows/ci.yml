@@ -1,0 +1,16 @@
+# .github/workflows/ci.yml
+# main 브랜치 푸시 시 동작하는 CI 워크플로우
+# Continuous Integration : 지속적 통합
+name: CI
+
+on:
+  push:
+    branches:
+      - main # main 브랜치 푸시만 감지
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest # 우분투 환경에서 실행
+    steps:
+      - name: Print hello message
+        run: echo "hello ci!" # 인사 메시지 출력
